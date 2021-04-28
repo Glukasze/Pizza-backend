@@ -15,6 +15,6 @@ import java.util.List;
 public class Margherita extends Pizza {
 
     public Margherita() {
-        super("Margherita", 2L, true, new TomatoSauce());
+        super("Margherita", 2L, true, new TomatoSauce(), new TomatoSauce());
     }
 }
