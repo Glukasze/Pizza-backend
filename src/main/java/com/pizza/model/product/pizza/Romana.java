@@ -8,6 +8,6 @@ import com.pizza.model.ingredient.TomatoSauce;
 public class Romana extends Pizza {
 
     public Romana() {
-        super("Romana", 2L, true, new TomatoSauce(), new Mushrooms(), new Ham());
+        super("Romana", 8L, true, new TomatoSauce(), new Mushrooms(), new Ham());
     }
 }

@@ -5,7 +5,7 @@ import com.pizza.model.ingredient.*;
 public class Vegan extends Pizza {
 
     public Vegan() {
-        super("Vegan", 1L, false, new TomatoSauce(),
-                new Corn(), new Jalapeno(), new Mushrooms(), new Onion(), new Tomato());
+        super("Vegan", 10L, false, new TomatoSauce(),
+                new Mushrooms(), new Onion(), new Broccoli(), new Corn(), new Paprika(), new Olives());
     }
 }

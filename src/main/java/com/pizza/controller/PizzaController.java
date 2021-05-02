@@ -28,11 +28,6 @@ public class PizzaController {
         this.pizzaService = pizzaService;
     }
 
-    public void test() {
-        save(new Rozano());
-        save(new Margherita());
-    }
-
     @GetMapping("/menu")
     public String getMenu() {
         AllPizzas allPizzas = new AllPizzas();

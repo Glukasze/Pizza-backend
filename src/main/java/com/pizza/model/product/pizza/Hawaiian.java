@@ -8,6 +8,6 @@ import com.pizza.model.ingredient.TomatoSauce;
 public class Hawaiian extends Pizza {
 
     public Hawaiian() {
-        super("Hawaiian", 1L, true, new TomatoSauce(), new Ham(), new Pineapple());
+        super("Hawaiian", 5L, true, new TomatoSauce(), new Ham(), new Pineapple());
     }
 }

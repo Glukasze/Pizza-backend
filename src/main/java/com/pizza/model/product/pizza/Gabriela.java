@@ -5,7 +5,7 @@ import com.pizza.model.ingredient.*;
 public class Gabriela extends Pizza {
 
     public Gabriela() {
-        super("Gabriela", 1L, true,
-                new TomatoSauce(), new Tomato(), new Onion(), new Jalapeno());
+        super("Gabriela", 4L, true,
+                new TomatoSauce(), new Salami(), new Corn(), new Onion(), new Jalapeno());
     }
 }

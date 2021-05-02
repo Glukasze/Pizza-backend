@@ -20,7 +20,8 @@ public class AllPizzas {
         this.pizzas.add(new Meatzza());
         this.pizzas.add(new Cheesy());
         this.pizzas.add(new Bianca());
-
+        this.pizzas.add(new Verde());
+        this.pizzas.add(new Custom());
     }
 
     public List<Pizza> getPizzas() {
