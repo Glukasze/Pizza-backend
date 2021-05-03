@@ -2,6 +2,7 @@ package com.pizza.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.pizza.model.ingredient.AllIngredients;
 import com.pizza.model.order.Order;
 import com.pizza.model.product.Product;
 import com.pizza.model.product.pizza.AllPizzas;
@@ -34,6 +35,18 @@ public class PizzaController {
         ObjectMapper mapper = new ObjectMapper();
         try {
             return mapper.writeValueAsString(allPizzas.getPizzas());
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    @GetMapping("/ingredients")
+    public String getIngredients() {
+        AllIngredients allIngredients = new AllIngredients();
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            return mapper.writeValueAsString(allIngredients.getIngredients());
         } catch (JsonProcessingException e) {
             e.printStackTrace();
             return null;

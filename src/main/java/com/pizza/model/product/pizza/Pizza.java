@@ -26,7 +26,7 @@ public class Pizza extends Product {
     private transient Ingredient sauce;
     private transient List<Ingredient> toppings = new ArrayList<>();
     private transient String toppingsString = "";
-    private transient int price;
+    private transient double price;
 
     public Pizza(String name, Long pictureId, boolean cheese, Ingredient sauce, Ingredient ... toppings) {
         super(name, pictureId);
@@ -47,7 +47,7 @@ public class Pizza extends Product {
     }
 
     private void calculatePrice() {
-        int temp = 10;
+        double temp = 10;
         if (toppings.size() > 0) {
             for (Ingredient ingredient: toppings) {
                 temp += ingredient.getPrice();
