@@ -19,17 +19,42 @@ import java.util.Optional;
 @Data
 @NoArgsConstructor
 @Entity
-@Inheritance
+//@Inheritance
 public class Pizza extends Product {
 
     private boolean cheese;
     private transient Ingredient sauce;
     private transient List<Ingredient> toppings = new ArrayList<>();
+    private transient String toppingsString = "";
+    private transient double price;
 
     public Pizza(String name, Long pictureId, boolean cheese, Ingredient sauce, Ingredient ... toppings) {
         super(name, pictureId);
         this.sauce = sauce;
         this.cheese = cheese;
         this.toppings.addAll(Arrays.asList(toppings));
+        calculatePrice();
+        createToppingsString();
     }
+
+    private void createToppingsString() {
+        for (int i = 0; i < toppings.size(); i++) {
+            this.toppingsString += toppings.get(i).getName();
+            if (i < toppings.size() - 1) {
+                this.toppingsString += ", ";
+            }
+        }
+    }
+
+    private void calculatePrice() {
+        double temp = 10;
+        if (toppings.size() > 0) {
+            for (Ingredient ingredient: toppings) {
+                temp += ingredient.getPrice();
+            }
+        }
+        this.price = temp;
+    }
+
+
 }

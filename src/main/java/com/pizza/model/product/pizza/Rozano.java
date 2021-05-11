@@ -13,7 +13,7 @@ import java.util.List;
 public class Rozano extends Pizza {
 
     public Rozano() {
-        super("Rozano", 1L, true, new TomatoSauce(),
-                new Ham(), new Onion(), new Corn(), new GarlicSauce());
+        super("Rozano", 9L, true, new TomatoSauce(),
+                new Salami(), new Onion(), new Mushrooms());
     }
 }
