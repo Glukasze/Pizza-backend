@@ -94,5 +94,5 @@ buildNumber.properties
 .metadata
 
 # other
-src/main/resources/application.properties
+src/main/resources/application.yml
 *.iml
