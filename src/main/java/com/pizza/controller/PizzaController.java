@@ -3,26 +3,17 @@ package com.pizza.controller;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pizza.model.ingredient.AllIngredients;
-import com.pizza.model.order.Order;
-import com.pizza.model.product.Product;
 import com.pizza.model.product.pizza.AllPizzas;
-import com.pizza.model.product.pizza.Margherita;
 import com.pizza.model.product.pizza.Pizza;
-import com.pizza.model.product.pizza.Rozano;
-import com.pizza.repository.PizzaRepository;
 import com.pizza.service.PizzaService;
-import org.apache.catalina.mapper.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
 public class PizzaController {
 
-    private PizzaService pizzaService;
+    private final PizzaService pizzaService;
 
     @Autowired
     public PizzaController(PizzaService pizzaService) {
