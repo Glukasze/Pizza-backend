@@ -2,13 +2,13 @@ package com.pizza.model.order;
 
 import java.io.Serializable;
 
-public class Order {
+public class UserOrder {
 
     private String time;
     private String content;
     private String address;
 
-    public Order(String time, String content, String address) {
+    public UserOrder(String time, String content, String address) {
         this.time = time;
         this.content = content;
         this.address = address;
