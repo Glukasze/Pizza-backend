@@ -1,6 +1,6 @@
-package com.pizza.model.product.pizza;
+package com.pizza.model.pizza;
 
-import com.pizza.model.ingredient.Pineapple;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;

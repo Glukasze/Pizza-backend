@@ -1,7 +1,6 @@
-package com.pizza.model.product.pizza;
+package com.pizza.model.pizza;
 
 import com.pizza.model.ingredient.Ham;
-import com.pizza.model.ingredient.Ingredient;
 import com.pizza.model.ingredient.Mushrooms;
 import com.pizza.model.ingredient.TomatoSauce;
 
