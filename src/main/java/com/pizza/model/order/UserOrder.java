@@ -19,6 +19,9 @@ public class UserOrder {
 //    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
+    private String street;
+    private String city;
+
     @OneToMany(cascade = CascadeType.ALL)
     private List<Pizza> pizzas = new ArrayList<>();
     private String pizzasAsString;

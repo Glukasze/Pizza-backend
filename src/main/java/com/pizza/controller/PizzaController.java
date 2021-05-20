@@ -95,4 +95,36 @@ public class PizzaController {
         this.userOrder.getPizzas().remove(pizza);
     }
 
+    @PostMapping("/add-street")
+    public void addstreet(@RequestBody() String street) {
+        this.userOrder.setStreet(street);
+    }
+
+    @PostMapping("/add-city")
+    public void addcity(@RequestBody() String city) {
+        this.userOrder.setCity(city);
+    }
+
+    @GetMapping("/get-street")
+    public String getStreet() {
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            return mapper.writeValueAsString(userOrder.getStreet());
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    @GetMapping("/get-city")
+    public String getCity() {
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            return mapper.writeValueAsString(userOrder.getCity());
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
 }
