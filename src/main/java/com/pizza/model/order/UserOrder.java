@@ -1,40 +1,50 @@
 package com.pizza.model.order;
 
-import java.io.Serializable;
+import com.pizza.model.pizza.Pizza;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
+
+@Data
+@Entity
+//@NoArgsConstructor
 public class UserOrder {
 
-    private String time;
-    private String content;
-    private String address;
+    @Id
+//    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
 
-    public UserOrder(String time, String content, String address) {
-        this.time = time;
-        this.content = content;
-        this.address = address;
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Pizza> pizzas = new ArrayList<>();
+    private String pizzasAsString;
+
+    public void setString() {
+        this.pizzasAsString = "";
+        for (int i = 0; i < pizzas.size(); i++) {
+            this.pizzasAsString += pizzas.get(i).getPizzaName();
+            if (i < pizzas.size() - 1) {
+                this.pizzasAsString += ", ";
+            }
+        }
     }
 
-    public String getTime() {
-        return time;
+    public UserOrder() {
+        this.id = (long)(Math.random() * 100000);
     }
 
-    public void setTime(String time) {
-        this.time = time;
+
+    public Pizza findById(Long id) {
+        for (Pizza pizza : this.pizzas) {
+            if (pizza.getId().equals(id)) {
+                return pizza;
+            }
+        }
+        return null;
     }
 
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
 }

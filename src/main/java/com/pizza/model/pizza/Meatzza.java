@@ -1,4 +1,4 @@
-package com.pizza.model.product.pizza;
+package com.pizza.model.pizza;
 
 import com.pizza.model.ingredient.*;
 

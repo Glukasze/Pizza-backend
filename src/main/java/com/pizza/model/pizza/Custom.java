@@ -1,6 +1,5 @@
-package com.pizza.model.product.pizza;
+package com.pizza.model.pizza;
 
-import com.pizza.model.ingredient.Ingredient;
 import com.pizza.model.ingredient.TomatoSauce;
 
 public class Custom extends Pizza {

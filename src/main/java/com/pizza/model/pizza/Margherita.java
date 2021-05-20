@@ -1,12 +1,8 @@
-package com.pizza.model.product.pizza;
+package com.pizza.model.pizza;
 
 
 import com.pizza.model.ingredient.*;
 import lombok.Data;
-
-import javax.persistence.Entity;
-import java.util.Arrays;
-import java.util.List;
 
 @Data
 //@Entity
